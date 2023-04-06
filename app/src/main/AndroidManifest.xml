@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,8 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipes"
-        android:name=".MainApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.frags.FragmentNavDemoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_fragment_demo"
+            android:theme="@style/Theme.Recipes.NoActionBar" />
+
+        <activity android:name=".ui.frags.FragmentDemoActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

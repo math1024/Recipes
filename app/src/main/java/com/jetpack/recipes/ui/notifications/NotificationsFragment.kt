@@ -39,7 +39,7 @@ class NotificationsFragment : Fragment() {
         binding.query.setOnClickListener(View.OnClickListener {
             println("query")
             Toast.makeText(activity, "query", Toast.LENGTH_SHORT).show()
-            AppDatabase.getInstance(activity!!)?.recordDao()?.getAll()
+            AppDatabase.getInstance(requireActivity())?.recordDao()?.getAll()
 
         })
         return root

@@ -1,5 +1,6 @@
 package com.jetpack.recipes.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jetpack.recipes.databinding.FragmentDashboardBinding
+import com.jetpack.recipes.ui.frags.FragmentDemoActivity
+import com.jetpack.recipes.ui.frags.FragmentNavDemoActivity
 
 class DashboardFragment : Fragment() {
 
@@ -32,6 +35,11 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        binding.fragsBtn.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(context, FragmentNavDemoActivity::class.java))
+//            startActivity(Intent(context, FragmentDemoActivity::class.java))
+        })
         println("DashboardFragment onCreateView")
         return root
     }

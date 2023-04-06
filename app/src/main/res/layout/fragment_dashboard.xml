@@ -15,16 +15,24 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shape_iv"
         android:layout_width="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/text_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@mipmap/ic_launcher"
         android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/frags_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragments"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@id/shape_iv"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
